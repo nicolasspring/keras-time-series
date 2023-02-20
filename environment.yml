@@ -1,4 +1,4 @@
-name: tf
+name: kts
 channels:
   - conda-forge
   - defaults
@@ -67,4 +67,4 @@ dependencies:
       - werkzeug==2.2.3
       - wrapt==1.14.1
       - zipp==3.14.0
-prefix: /home/nicolas/miniconda3/envs/tf
+prefix: /home/nicolas/miniconda3/envs/kts
