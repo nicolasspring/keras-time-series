@@ -2,7 +2,7 @@ import typing as t
 
 import numpy as np
 
-from kts.data_loaders.timeseries.base import BaseDataLoader
+from kts.data_loaders.base import BaseDataLoader
 
 
 class FordADataLoader(BaseDataLoader):
