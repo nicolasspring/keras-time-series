@@ -47,7 +47,7 @@ class FordADataLoader(BaseDataLoader):
         return self.x_train, self.y_train
 
     def _get_test_set(self) -> t.Tuple[np.ndarray, np.ndarray]:
-        self.x_test, self.y_test
+        return self.x_test, self.y_test
 
     def _get_valid_set(self):
         raise NotImplementedError(
