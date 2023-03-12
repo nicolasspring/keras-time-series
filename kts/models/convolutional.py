@@ -1,14 +1,20 @@
-import nump as np
+import numpy as np
 from tensorflow import keras
 
+from kts.models import BaseModel
 
-class ConvModelFordA:
+
+class ConvModelFordA(BaseModel):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
     def _make_model(self, x_train: np.ndarray, num_classes: int) -> keras.Model:
         input_shape = x_train.shape[1:]
         input_layer = keras.layers.Input(input_shape)
 
-        conv1 = keras.layers.Conv1D(filters=64, kernel_size=3, padding="same")(input_layer)
+        conv1 = keras.layers.Conv1D(filters=64, kernel_size=3, padding="same")(
+            input_layer
+        )
         conv1 = keras.layers.BatchNormalization()(conv1)
         conv1 = keras.layers.ReLU()(conv1)
 

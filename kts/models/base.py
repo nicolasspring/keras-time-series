@@ -6,7 +6,7 @@ from tensorflow import keras
 
 class BaseModel(ABC):
     def __init__(self, x_train: np.ndarray, num_classes: int = None):
-        self.model = self._make_model(x_train)
+        self.model = self._make_model(x_train, num_classes)
 
     @abstractmethod
     def _make_model(self, x_train: np.ndarray, num_classes: int = None) -> keras.Model:
